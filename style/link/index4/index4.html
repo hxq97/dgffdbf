@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+*{margin:0;padding:0;list-style:none;}
+html{overflow: hidden;}
+body{ background:url(img4/bg.jpg);background-size:100em 108%;}
+#ul1{ position:relative;width:480px; height:400px; margin:100px auto;}
+#ul1 li{opacity:0; position:absolute;left:0;top:0;width:100%; height:100%;
+	/*初始化*/
+	transform:perspective(800px) translateX(0px) rotateY(0deg);
+	/*添加运动*/
+	transition:0.7s all ease;
+}
+#ul1 li img{width:100%; height:100%;}
+
+#ul1 li.l2{opacity:0;transform:perspective(800px) translateX(-400px) rotateY(60deg); z-index:1; }
+#ul1 li.l1{ opacity:1; transform:perspective(800px) translateX(-260px) rotateY(60deg); z-index:2;}
+
+#ul1 li.cur{ opacity:1;z-index:5;}
+
+#ul1 li.r1{opacity:1; transform:perspective(800px) translateX(260px) rotateY(-60deg);z-index:2;}
+#ul1 li.r2{opacity:0; transform:perspective(800px) translateX(400px) rotateY(-60deg);z-index:1;}
+.in1{width: 80px;height: 35px;position:absolute;left: 397px;top: 50px;}
+.in2{width: 80px;height: 35px;position:absolute;left: 890px;top: 50px;}
+.in1:hover{background: #f0f;color:#fff;}
+.in2:hover{background: #f0f;color:#fff;}
+</style>
+<script>
+window.onload = function(){
+	var oPrev = document.getElementById("prev");
+	var oNext = document.getElementById("next");
+	var oUl = document.getElementById("ul1");
+	var aLi = oUl.children;
+	var len = aLi.length;
+	
+	var bReady = true;
+	
+	var aClass = [];
+	for(var i = 0; i < len; i++){
+		aClass.push(aLi[i].className);
+	}
+	
+	oNext.onclick = function(){
+		
+		if(!bReady) return;
+		bReady = false;
+		
+		aClass.unshift(aClass.pop());
+		
+		tab();
+	};
+	
+	oPrev.onclick = function(){
+		if(!bReady) return;
+		bReady = false;
+		
+		aClass.push(aClass.shift());
+		
+		tab();
+	};
+	
+	function tab(){
+		for(var i = 0; i < len; i++){
+			aLi[i].className = aClass[i];
+		}
+		var oCur = oUl.querySelector(".cur");
+		
+		oCur.addEventListener("transitionend",function(){
+			bReady = true;
+		},false);	
+	}
+	
+ 
+};
+
+</script>
+</head>
+
+<body>
+<input id="prev" type="button" value="上一个" class="in1"/>
+<input id="next" type="button" value="下一个" class="in2"/>
+
+<ul id="ul1">
+	<li class="l2"><img src="img4/1.jpg"/></li>
+	<li class="l1"><img src="img4/2.jpg"/></li>
+	<li class="cur"><img src="img4/3.jpg"/></li>
+	<li class="r1"><img src="img4/4.jpg"/></li>
+	<li class="r2"><img src="img4/5.jpg"/></li>
+	<li><img src="img4/6.jpg"/></li>
+	<li><img src="img4/7.jpg"/></li>
+	<li><img src="img4/8.jpg"/></li>
+	<li><img src="img4/9.jpg"/></li>
+	<li><img src="img4/10.jpg"/></li>
+</ul>
+</body>
+</html>

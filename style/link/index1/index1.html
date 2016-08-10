@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>智能社www.zhinengshe.com | 专注前端 培训专家</title>
+    <meta name="baidu-site-verification" content="hgbWkTO3VR"/>
+    <meta name="robots" content="all"/>
+    <meta name="author" content="智能社 - zhinengshe.com"/>
+    <meta name="copyright" content="智能社 - zhinengshe.com"/>
+    <meta name="keywords" content="JavaScript培训,JS培训,JavaScript教程,HTML5培训,CSS3培训,北京JS培训,北京JavaScript培训,北京HTML5培训"/>
+    <title>Title</title>
+    <style>
+        *{ margin:0; padding:0; list-style:none;}
+        #oUl{ overflow:hidden; width:800px; height:400px; position:relative; margin:100px auto;}
+        #oUl li{ width:800px; height:400px; position:absolute;}
+        #oUl img{ width:800px; height:400px;}
+    </style>
+    <script src="move.js"></script>
+    <script>
+        window.onload=function(){
+            var oUl=document.getElementById('oUl');
+            var aLi=oUl.children;
+            var oW=oUl.offsetWidth;
+            var w=30;
+
+            for(var i=1;i<aLi.length;i++){
+                aLi[i].style.left=oW-(aLi.length-i)*w+'px';
+            }
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].index=i;
+                aLi[i].onmouseover=function(){
+                    for(var i=0;i<aLi.length;i++){
+                        if(i<=this.index){
+                            move(aLi[i],{left:i*w});
+                            //aLi[i].style.left=i*w+'px';
+                        }else{
+                            move(aLi[i],{left:oW-(aLi.length-i)*w});
+//                            aLi[i].style.left=oW-(aLi.length-i)*w+'px';
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <ul id="oUl">
+        <li><img src="img1/1.jpg" alt=""></li>
+        <li><img src="img1/2.jpg" alt=""></li>
+        <li><img src="img1/3.jpg" alt=""></li>
+        <li><img src="img1/4.jpg" alt=""></li>
+        <li><img src="img1/5.jpg" alt=""></li>
+        <li><img src="img1/6.jpg" alt=""></li>
+    </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+

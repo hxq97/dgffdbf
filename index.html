@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>love</title>
+    <link rel="stylesheet" type="text/css" href="style/css/index.css">
+    <link rel="stylesheet" type="text/css" href="style/css/ass/gujia.css" />
+
+    <script src="style/js/jquery-1.11.1.min.js"></script>
+    <script src="style/js/jquery.mousewheel.min.js"></script>
+    <script src="style/js/index.js"></script>
+    <script src="style/js/suipian.js"></script>
+<script type="text/javascript">
+    window.onload=function(){
+        running();
+        run2();
+        nav1(); 
+        suipian(5000);
+        $(".header-cont .rightnav a").click(function(){
+            var page = $(this).index();
+            if(page<0){
+                page=0;
+            }
+            if(page>4){
+                page=4;
+            }
+            $("#content").stop(true).animate({"top": (-100 * page +100)+ "%"},1000);
+            $(".header-cont .rightnav a").eq(page).addClass('cur').siblings().removeClass('cur');
+        });
+    }
+    var oA=new Audio();
+
+    //oA.src='4.ogg';
+    oA.src='style/mp3/袁姗姗 - 有你就足够.mp3';
+
+    oA.play();
+    </script>
+
+</head>
+<body>
+    <div id="bigbox">
+<!--欢迎页-->
+    <div id="welcome">
+        <span>进入主页</span>
+    </div>
+<!--大盒子-->
+    <div id="content">  
+<!--第一版-->
+    <div class="layout-one">
+        <div class="tutu" id="tutu">
+            <img class="zhentu" src="style/images/banner2.jpg" alt="">
+        </div>
+        <div class="header">
+        <div class="header-cont">
+            <div class="rightnav">
+                <a href="#">L</a>
+                <a href="#">O</a>
+                <a href="#">V</a>
+                <a href="#">E</a>
+                <a href="#">(ˇˍˇ) 欣～</a>
+            </div>  
+            <h1><a href="#"><!-- <img src="style/images/logo.png"> --></a></h1>
+        <nav>
+            <ul>
+                <li>
+                    <div>
+                        <span><a href="#"  class="n1">LOVE</a></span>
+                        <span><a href="#" class="n2">LOVE</a></span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span><a href="#" class="n1">常</a></span>
+                        <span><a href="#" class="n2">常</a></span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span><a href="#" class="n1">月</a></span>
+                        <span><a href="#" class="n2">月</a></span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span><a href="#" class="n1">欣</a></span>
+                        <span><a href="#" class="n2">欣</a></span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span><a href="#" class="n1">LOVE</a></span>
+                        <span><a href="#" class="n2">LOVE</a></span>
+                    </div>
+                </li>   
+            </ul>
+        </nav>
+        </div>
+        </div>
+        
+    </div>
+<!--第二版-->
+        <div class="layout-two">
+            <div class="two-cont">
+                <div class="t-c-top">
+                    <dl class="dl-one">
+                        <dt><a href="style/link/index1/index1.html" target="_blank">常</a></dt>
+                        <dd><a href="style/link/index1/index1.html" target="_blank"><img src="style/images/layout2_pic1.jpg" height="242" width="305" alt="" ></a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="style/link/index2/index2.html" target="_blank">月</a></dt>
+                        <dd><a href="style/link/index2/index2.html" target="_blank"><img src="style/images/layout2_pic2.jpg" height="242" width="305" alt="" ></a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="http://www.html5tricks.com/demo/html5-canvas-particle-effect/index.html"</a>欣</dt>
+                        <dd><a href="http://www.html5tricks.com/demo/html5-canvas-particle-effect/index.html" ><img src="style/images/layout2_pic3.jpg" height="242" width="305" alt="" ></a></dd>
+                    </dl>
+                </div>
+            <div class="t-c-bottom">
+                <dl>
+                    <dt><a href="style/link/index4/index4.html"  target="_blank"><img src="style/images/layout2_pic4-1.jpg" height="300" width="305" alt="" ></a></dt>
+                    <dd><a href="style/link/index4/index4.html" target="_blank"><img src="style/images/layout2_pic4.png" height="270" width="305" alt="" ></a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="style/link/index5/index5.html" target="_blank"><img src="style/images/layout2_pic5-1.jpg" height="300" width="305" alt="" ></a></dt>
+                    <dd><a href="style/link/index5/index5.html" target="_blank"><img src="style/images/layout2_pic5.jpg" height="270" width="305" alt="" ></a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="style/link/index6/index6.html" target="_blank"><img src="style/images/layout2_pic6-1.jpg" height="300" width="305" alt="" ></a></dt>
+                    <dd><a href="style/link/index6/index6.html" target="_blank"><img src="style/images/layout2_pic6.png" height="270" width="305" alt="" ></a></dd>
+                </dl>
+            </div>
+        </div>
+        </div>
+<!--第三版-->
+        <div class="layout-three">
+            <div class="three-cont">
+                <div class="imagelist">
+                    <ul>
+                        <li class="no0"><a href="#"><img src="style/images/0.jpg" alt="" /></a></li>
+                        <li class="no1"><a href="#"><img src="style/images/1.jpg" alt="" /></a></li>
+                        <li class="no2"><a href="#"><img src="style/images/2.jpg" alt="" /></a></li>
+                        <li class="no3"><a href="#"><img src="style/images/3.jpg" alt="" /></a></li>
+                        <li class="no4"><a href="#"><img src="style/images/4.jpg" alt="" /></a></li>
+                        <li class="no5"><a href="#"><img src="style/images/5.jpg" alt="" /></a></li>
+                        <li class="no6"><a href="#"><img src="style/images/6.jpg" alt="" /></a></li>
+                    </ul>
+                </div>
+                    <span class="arow-l">
+                    <a href="#"><img src="style/images/arow-l.png" ></a>
+                </span>
+                <div class="t-c-left"></div>
+                <div class="t-c-center"></div>
+                <div class="t-c-right"></div>
+                <span class="arow-r">
+                    <a href="#"><img src="style/images/arow-r.png"></a>
+                </span>
+            </div>
+        </div>
+<!--第四版-->
+        <div class="layout-four">
+            <div class="four-cont">
+                <div class="four-top">
+                    <h2>大傻子</h2>
+                    <p>你看那两只蝴蝶，他们的爱真真切切，那花丛便是见证他们爱的台榭，我们的爱也会像这两只蝴蝶一样，爱的真真切切，时间会证明一切。</p>
+                    <p>想你的时候，如果你不知道，我会感到孤单。想你的时候，你知道我在想你，我内心已经有了慰藉。想你的时候，如果你也在想我，我就会感觉甜蜜。</p>
+                </div>
+                <div class="four-center">
+                    <img class="myphoto" src="style/images/myphoto.jpg"/>
+                    <img class="photo" src="style/images/photo.png"/>
+                </div>
+                <div class="four-right">
+                    <h2>永远在一起</h2>
+                    <p>有一天，我们一起起床，一起刷牙，一起拉着手出家门。一起遛狗，一起散步，一起为了争电视斗智斗勇。一起买菜，一起做饭，一起为了几毛钱在菜市场咆哮。我知道，一定会有这么一天的。</p>
+                    <p>我爱你，不光因为你的样子，还因为和你在一起时我的样子；我爱你，不光因为你为我而做的事，还因为为了你我能做成的事；我爱你，因为你能唤出我最真的那部分，我心里最美丽的地方被你的光芒照得通亮。</p>
+                </div>
+            </div>
+        </div>
+<!--第五版-->
+        <div class="layout-five">
+            <img src="style/images/music.png" height="64" width="80" alt="" />
+        <div id="flip" class="container" data-attr-page="0">
+            <div class="page page1">
+                <div class="cl"></div>
+                <div id="canvas"></div>
+                <!-- <div id="content-loader-holder">
+                    <div id="content-loader"></div>
+                </div>
+                <div class="flubber">
+                    <div class="flubber-guy">
+                        <div class="flubber-eyes"></div>
+                    </div>
+                    <ul class="flubber-quote">
+                        <li>Welcome visitor !</li>
+                        <li>My name is WangRong</li>
+                        <li>The little picture in the middle is my personal logo</li>
+                        <li>And this is my website</li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+    <script type="text/javascript" src="style/js/protoclass.js"></script>
+    <script type="text/javascript" src='style/js/box2d.js'></script>
+    <script type="text/javascript" src='style/js/Main.js'></script>
+    <script type="text/javascript" src="style/js/me.js"></script>
